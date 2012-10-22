@@ -1,0 +1,6 @@
+
+VERSION 2 --- 2012/10/21
+* Fixed a problem with the Forestry plugin under Java 6.
+
+VERSION 1 --- 2012/10/21
+* First public version of the update script released.
