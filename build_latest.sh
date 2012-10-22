@@ -25,21 +25,6 @@ if [[ "$ORIGINAL" ]]; then
         if [[ -d "$ORIGINAL" ]]; then
             if [[ -d "$TARGET" ]]; then
                 FILENAME="$ORIGINAL-$TARGET.patch"
-
-                rm "$ORIGINAL/Library/Application Support/minecraft/lastlogin" &> /dev/null
-                rm "$TARGET/Library/Application Support/minecraft/lastlogin" &> /dev/null
-
-                rm -rf "$ORIGINAL/Library/Application Support/minecraft/stats/*" &> /dev/null
-
-                rm -rf "$ORIGINAL/Library/Application Support/minecraft/stats/*" &> /dev/null
-                rm -rf "$TARGET/Library/Application Support/minecraft/stats/*" &> /dev/null
-
-                find $ORIGINAL/ -name \.DS_Store -exec rm -v {} \; &> /dev/null
-                find $TARGET/ -name \.DS_Store -exec rm -v {} \; &> /dev/null
-
-                find $ORIGINAL/ -name \*.log -exec rm -v {} \; &> /dev/null
-                find $TARGET/ -name \*.log -exec rm -v {} \; &> /dev/null
-
                 diff -rupN "$ORIGINAL/" "$TARGET/" > "$FILENAME"
                 return
             fi
