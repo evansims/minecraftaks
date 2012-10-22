@@ -116,4 +116,4 @@ if [[ $? -eq 0 ]]; then
 fi
 
 echo Starting MinecraftAKS ...
-/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home/bin/java -Xms2048M -Xmx2048M -Duser.home="$(pwd)/minecraftdata" -jar "$(pwd)/minecraft.jar" net.minecraft.LauncherFrame --noupdate
+$JAVA_PATH -Xms2048M -Xmx2048M -Duser.home="$(pwd)/minecraftdata" -jar "$(pwd)/minecraft.jar" net.minecraft.LauncherFrame --noupdate
