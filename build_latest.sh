@@ -6,8 +6,8 @@ mv minecraftdata minecraftdata_update
 
 rm "./minecraftdata_update/Library/Application Support/minecraft/lastlogin" &> /dev/null
 rm -rf "./minecraftdata_update/Library/Application Support/minecraft/stats/*" &> /dev/null
-find "./minecraft_dataUpdate/" -name \.DS_Store -exec rm -v {} \; &> /dev/null
-find "./minecraft_dataUpdate/" -name \*.log -exec rm -v {} \; &> /dev/null
+find "./minecraftdata_update/" -name \.DS_Store -exec rm -v {} \; &> /dev/null
+find "./minecraftdata_update/" -name \*.log -exec rm -v {} \; &> /dev/null
 
 tar -czf latest.tar.gz minecraftdata_update/
 mv minecraftdata_update minecraftdata
