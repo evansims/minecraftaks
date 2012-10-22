@@ -43,10 +43,10 @@ else
                 fi
             fi
         else
-            echo "$JAVA_VER found."
+            echo "$JAVA_VER_FULL found."
         fi
     else
-        echo "$JAVA_VER found."
+        echo "$JAVA_VER_FULL found."
     fi
 fi
 
