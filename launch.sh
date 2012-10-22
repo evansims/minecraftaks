@@ -59,7 +59,7 @@ else
     echo "Fresh MinecraftAKS installation detected."
 fi
 
-curl -s -o "$DIR/update.cfg" http://evansims.com/minecraft/latest.cfg
+curl -s -o "$DIR/update.cfg" https://raw.github.com/evansims/MinecraftAKS/master/latest.cfg
 
 if [[ $? -eq 0 ]]; then
     LATEST=$(head -n 1 "$DIR/update.cfg")
@@ -71,9 +71,9 @@ if [[ $? -eq 0 ]]; then
         fi
 
         echo "Downloading v$LATEST ($DOWNLOADSIZE) ... "
-        curl -s -o "$DIR/changelog.txt" http://evansims.com/minecraft/changelog.txt
-        curl -s -o "$DIR/minecraft.jar" http://evansims.com/minecraft/minecraft.jar
-        curl -S -o "$DIR/update.tar.gz" http://evansims.com/minecraft/latest.tar.gz
+        curl -s -o "$DIR/changelog.txt" https://raw.github.com/evansims/MinecraftAKS/master/changelog.cfg
+        curl -s -o "$DIR/minecraft.jar" https://raw.github.com/evansims/MinecraftAKS/master/minecraft.jar
+        curl -S -o "$DIR/update.tar.gz" http://evansims.com/minecraft/clientdata-v$VERSION.tar.gz
 
         if [[ $? -eq 0 ]]; then
             echo -n "Extracting files ... "
