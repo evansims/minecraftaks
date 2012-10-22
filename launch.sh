@@ -73,7 +73,7 @@ if [[ $? -eq 0 ]]; then
         echo "Downloading v$LATEST ($DOWNLOADSIZE) ... "
         curl -s -o "$DIR/changelog.txt" https://raw.github.com/evansims/MinecraftAKS/master/changelog.cfg
         curl -s -o "$DIR/minecraft.jar" https://raw.github.com/evansims/MinecraftAKS/master/minecraft.jar
-        curl -S -o "$DIR/update.tar.gz" http://evansims.com/minecraft/clientdata-v$VERSION.tar.gz
+        curl -S -o "$DIR/update.tar.gz" https://github.com/downloads/evansims/MinecraftAKS/clientdata-v$VERSION.tar.gz
 
         if [[ $? -eq 0 ]]; then
             echo -n "Extracting files ... "
